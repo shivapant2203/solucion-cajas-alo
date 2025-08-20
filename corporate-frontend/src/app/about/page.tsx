@@ -4,8 +4,16 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaBoxOpen, FaHandsHelping, FaRecycle, FaStar } from 'react-icons/fa'
 
+interface AboutData {
+  title: string;
+  description: string;
+}
+
+
 export default function AboutPage() {
-  const [about, setAbout] = useState<any>(null)
+  // const [about, setAbout] = useState<any>(null)
+  const [about, setAbout] = useState<AboutData | null>(null);
+
   useEffect(() => {
     fetch('/api/about')
       .then(res => res.json())
