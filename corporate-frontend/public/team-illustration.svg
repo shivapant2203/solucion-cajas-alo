@@ -1,0 +1,16 @@
+<svg width="480" height="380" viewBox="0 0 480 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="240" cy="340" rx="220" ry="35" fill="#ffe9d5"/>
+  <circle cx="140" cy="190" r="38" fill="#ffd6b0"/>
+  <circle cx="320" cy="180" r="45" fill="#ff813f" fill-opacity="0.10"/>
+  <circle cx="193" cy="120" r="30" fill="#ff813f" fill-opacity="0.13"/>
+  <rect x="95" y="230" width="90" height="50" rx="16" fill="#ff813f" fill-opacity="0.08"/>
+  <rect x="275" y="225" width="105" height="55" rx="18" fill="#ff813f" fill-opacity="0.09"/>
+  <!-- Team heads (three) -->
+  <circle cx="160" cy="260" r="18" fill="#ff813f"/>
+  <circle cx="200" cy="250" r="14" fill="#ffd6b0"/>
+  <circle cx="325" cy="260" r="17" fill="#ff813f"/>
+  <!-- Smile arcs (for a subtle, human touch) -->
+  <path d="M154 266 Q160 272 166 266" stroke="#cc7832" stroke-width="2" fill="none"/>
+  <path d="M318 266 Q325 272 332 266" stroke="#cc7832" stroke-width="2" fill="none"/>
+  <path d="M194 254 Q200 259 206 254" stroke="#cc7832" stroke-width="2" fill="none"/>
+</svg>

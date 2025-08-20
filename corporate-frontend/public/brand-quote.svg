@@ -1,0 +1,28 @@
+<svg width="390" height="320" viewBox="0 0 390 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soft glowing background ellipse -->
+  <ellipse cx="200" cy="265" rx="170" ry="38" fill="#ffe9d5"/>
+  <!-- Boxes -->
+  <rect x="85" y="170" width="68" height="44" rx="9" fill="#ffd6b0" />
+  <rect x="108" y="135" width="64" height="40" rx="9" fill="#ff813f" fill-opacity="0.13"/>
+  <rect x="150" y="192" width="48" height="30" rx="7" fill="#ff813f" fill-opacity="0.17"/>
+  <!-- Left character: -->
+  <ellipse cx="125" cy="122" rx="16" ry="16" fill="#ffd6b0"/>
+  <rect x="117" y="138" width="16" height="30" rx="6" fill="#ff813f" fill-opacity="0.14"/>
+  <rect x="114" y="165" width="22" height="17" rx="7" fill="#ffe9d5"/>
+  <!-- Right character: -->
+  <ellipse cx="235" cy="126" rx="16" ry="16" fill="#ff813f" fill-opacity="0.8"/>
+  <rect x="227" y="142" width="16" height="32" rx="7" fill="#ffd6b0"/>
+  <rect x="224" y="170" width="22" height="15" rx="6" fill="#fff8ef"/>
+  <!-- Notepad/folder (quote request) -->
+  <rect x="260" y="160" width="70" height="45" rx="10" fill="#fff8ef" stroke="#ff813f" stroke-width="2"/>
+  <rect x="275" y="175" width="40" height="9" rx="4" fill="#ffd6b0"/>
+  <rect x="275" y="190" width="26" height="8" rx="4" fill="#ffe9d5"/>
+  <!-- Hands/interaction -->
+  <path d="M140 138 Q149 149 158 138" stroke="#ff813f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M231 142 Q238 153 246 142" stroke="#ff813f" stroke-width="3" stroke-linecap="round"/>
+  <!-- Smiles -->
+  <path d="M121 126 Q125 132 130 126" stroke="#cc7832" stroke-width="2" fill="none"/>
+  <path d="M230 130 Q235 135 241 130" stroke="#cc7832" stroke-width="2" fill="none"/>
+  <!-- Abstract approval/check icon above notepad -->
+  <path d="M318 154l12 12 20-20" stroke="#ff813f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
