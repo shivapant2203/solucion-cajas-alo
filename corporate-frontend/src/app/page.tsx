@@ -245,10 +245,10 @@ export default function HomePage() {
       : 'SEE HOW BOXES ARE MADE'
 
   return (
-    <main className="bg-packaging-light min-h-screen flex flex-col p-8 max-w-4xl mx-auto">
+    <main className="bg-packaging-light min-h-screen flex flex-col p-8 max-w-7xl mx-auto w-full">
       {/* Hero Section */}
       <section
-        className="relative flex items-center min-h-[520px] md:min-h-[650px] mb-12 overflow-hidden"
+        className="relative flex items-center min-h-[520px] md:min-h-[650px] mb-12 overflow-hidden w-full"
         style={{
           backgroundImage: "url('/hero-bg.jpg')",
           backgroundSize: 'cover',
@@ -284,7 +284,7 @@ export default function HomePage() {
       </section>
 
       {/* Feature Cards Section */}
-      <section className="bg-[#f0ead9] py-12 mt-12 rounded-lg shadow-inner">
+      <section className="bg-[#f0ead9] py-12 mt-12 rounded-lg shadow-inner w-full">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-6 justify-center items-stretch">
           <div className="flex-1 bg-white rounded-2xl shadow-xl px-8 py-7 flex flex-col items-center text-center border border-[#d2b48c]">
             <h2 className="text-xl md:text-2xl font-bold text-packaging-dark mb-2">
@@ -320,7 +320,7 @@ export default function HomePage() {
       </section>
 
       {/* Product Gallery Call-to-Action Section */}
-      <section className="bg-[#f0ead9] py-14 mt-8 flex flex-col items-center">
+      <section className="bg-[#f0ead9] py-14 mt-8 flex flex-col items-center w-full">
         <h2 className="text-2xl md:text-3xl font-bold text-[#795548] mb-5 text-center">
           {lang === 'es' ? '¿Quieres ver ejemplos de nuestros productos?' : 'Want to see our work?'}
         </h2>
