@@ -225,11 +225,10 @@
 // }
 
 'use client'
-import { useState } from 'react'
 import { useLanguage } from '@/context/LanguageContext'
 import Link from 'next/link'
 
-export default function QuotationPage() {
+export default function HomePage() {
   const { language: lang } = useLanguage()
 
   const headline =
@@ -245,49 +244,6 @@ export default function QuotationPage() {
       ? 'VER CÓMO SE FABRICAN LAS CAJAS'
       : 'SEE HOW BOXES ARE MADE'
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    mobile: '',
-    details: ''
-  })
-  const [loading, setLoading] = useState(false)
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-
-    try {
-      const res = await fetch('/api/send-quotation', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-
-      if (res.ok) {
-        alert(lang === 'es' ? '¡Solicitud enviada con éxito!' : 'Quotation request sent successfully!')
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          mobile: '',
-          details: ''
-        })
-      } else {
-        alert(lang === 'es' ? 'Error al enviar la solicitud' : 'Failed to send quotation request')
-      }
-    } catch (error) {
-      alert(lang === 'es' ? 'Error de red, inténtalo más tarde' : 'Network error, please try later')
-    } finally {
-      setLoading(false)
-    }
-  }
-
   return (
     <main className="bg-packaging-light min-h-screen flex flex-col p-8 max-w-4xl mx-auto">
       {/* Hero Section */}
@@ -296,7 +252,7 @@ export default function QuotationPage() {
         style={{
           backgroundImage: "url('/hero-bg.jpg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-packaging-light via-packaging-light/90 to-transparent" />
@@ -305,9 +261,7 @@ export default function QuotationPage() {
           <h1 className="text-[2.5rem] md:text-[3.2rem] font-extrabold leading-tight text-textPrimary mb-6">
             {headline}
           </h1>
-          <p className="text-lg text-packaging-dark mb-8 max-w-lg">
-            {subtitle}
-          </p>
+          <p className="text-lg text-packaging-dark mb-8 max-w-lg">{subtitle}</p>
           <Link
             href="/about"
             className="inline-block font-extrabold tracking-wide text-packaging-accent border-b-2 border-packaging-accent hover:text-white hover:bg-packaging-accentDark hover:border-white rounded transition px-2 py-1 text-lg bg-packaging-light"
@@ -324,68 +278,9 @@ export default function QuotationPage() {
             maxWidth: 450,
             height: 130,
             backgroundColor: '#D2B48C',
-            clipPath: 'polygon(0 60%,100% 0,100% 100%,0 100%)'
+            clipPath: 'polygon(0 60%,100% 0,100% 100%,0 100%)',
           }}
         />
-      </section>
-
-      {/* Quotation Form Section */}
-      <section className="bg-white p-8 rounded-lg shadow-lg border border-[#d2b48c]">
-        <h2 className="text-3xl font-bold mb-6">
-          {lang === 'es' ? 'Solicitud de Cotización' : 'Quotation Request'}
-        </h2>
-
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder={lang === 'es' ? 'Nombre' : 'Name'}
-            required
-            className="border p-3 rounded"
-          />
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder={lang === 'es' ? 'Correo Electrónico' : 'Email'}
-            required
-            className="border p-3 rounded"
-          />
-          <input
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            placeholder={lang === 'es' ? 'Empresa' : 'Company'}
-            className="border p-3 rounded"
-          />
-          <input
-            name="mobile"
-            value={formData.mobile}
-            onChange={handleChange}
-            placeholder={lang === 'es' ? 'Teléfono' : 'Mobile'}
-            className="border p-3 rounded"
-          />
-          <textarea
-            name="details"
-            value={formData.details}
-            onChange={handleChange}
-            placeholder={lang === 'es' ? 'Detalles adicionales' : 'Additional details'}
-            rows={5}
-            required
-            className="border p-3 rounded resize-none"
-          />
-          <button
-            type="submit"
-            disabled={loading}
-            className="bg-packaging-accent text-white py-3 rounded font-bold hover:bg-packaging-accentDark disabled:opacity-50"
-          >
-            {loading
-              ? lang === 'es' ? 'Enviando...' : 'Sending...'
-              : lang === 'es' ? 'Enviar Solicitud' : 'Send Request'}
-          </button>
-        </form>
       </section>
 
       {/* Feature Cards Section */}
@@ -423,7 +318,6 @@ export default function QuotationPage() {
           </div>
         </div>
       </section>
-
 
       {/* Product Gallery Call-to-Action Section */}
       <section className="bg-[#f0ead9] py-14 mt-8 flex flex-col items-center">

@@ -195,8 +195,183 @@
 //   )
 // }
 
+// 'use client'
+// import { useState } from 'react'
+// import { useLanguage } from '@/context/LanguageContext'
+// import { FaUser, FaEnvelope, FaBuilding, FaPhoneAlt, FaRegListAlt } from 'react-icons/fa'
+
+// const pageTranslations = {
+//   en: {
+//     heading: 'Get a Quotation',
+//     note: 'Fill out the form and our team will reply within one business day.',
+//     name: 'Your Name',
+//     email: 'Your Email',
+//     company: 'Company (optional)',
+//     mobile: 'Your Mobile Number',
+//     details: 'Describe your needs (dimensions, quantity, etc.)',
+//     button: 'Send Quotation Request',
+//     success: 'Quotation request sent successfully!',
+//     failure: 'Failed to send quotation request. Please try again.'
+//   },
+//   es: {
+//     heading: 'Solicitar Cotización',
+//     note: 'Completa el formulario y nuestro equipo responderá en menos de un día hábil.',
+//     name: 'Tu Nombre',
+//     email: 'Tu Correo',
+//     company: 'Compañía (opcional)',
+//     mobile: 'Tu Teléfono',
+//     details: 'Describe tus necesidades (dimensiones, cantidad, etc.)',
+//     button: 'Enviar Solicitud de Cotización',
+//     success: '¡Solicitud enviada con éxito!',
+//     failure: 'Error al enviar la solicitud. Por favor intenta de nuevo.'
+//   }
+// }
+
+// export default function QuotationPage() {
+//   const { language } = useLanguage()
+//   const t = pageTranslations[language]
+
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     email: '',
+//     company: '',
+//     mobile: '',
+//     details: ''
+//   })
+//   const [loading, setLoading] = useState(false)
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value })
+//   }
+
+//   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+//     e.preventDefault()
+//     setLoading(true)
+//     try {
+//       const res = await fetch('/api/send-quotation', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(formData),
+//       })
+
+//       if (res.ok) {
+//         alert(t.success)
+//         setFormData({ name: '', email: '', company: '', mobile: '', details: '' })
+//       } else {
+//         alert(t.failure)
+//       }
+//     } catch (error) {
+//       alert(t.failure)
+//     } finally {
+//       setLoading(false)
+//     }
+//   }
+
+//   return (
+//     <div className="bg-packaging-light min-h-screen w-full font-sans px-6 py-16 flex flex-col items-center">
+//       <div className="max-w-5xl w-full flex flex-col md:flex-row gap-12 items-stretch justify-center">
+//         {/* Left-aligned illustration/visual */}
+//         <div className="hidden md:flex md:w-2/5 items-center justify-center">
+//           <img
+//             src="/brand-quote.svg"
+//             alt="Brand Illustration"
+//             className="w-full max-w-xs"
+//           />
+//         </div>
+//         {/* Form column */}
+//         <div className="w-full md:w-3/5 flex flex-col items-center">
+//           <h1 className="text-4xl sm:text-5xl font-extrabold text-packaging-dark tracking-tight mb-2 text-center md:text-left w-full">
+//             {t.heading}
+//           </h1>
+//           <p className="mb-8 text-packaging-accent text-lg font-medium w-full text-center md:text-left">
+//             {t.note}
+//           </p>
+//           <form
+//             onSubmit={handleSubmit}
+//             className="
+//               w-full max-w-xl
+//               bg-packaging-light rounded-2xl border border-packaging-DEFAULT shadow
+//               px-8 py-10
+//               flex flex-col gap-6
+//               items-stretch
+//             "
+//             style={{ minWidth: '320px' }}
+//           >
+//             <div className="relative flex items-center">
+//               <FaUser className="absolute left-4 text-packaging-accent w-5 h-5" />
+//               <input
+//                 type="text"
+//                 name="name"
+//                 placeholder={t.name}
+//                 value={formData.name}
+//                 onChange={handleChange}
+//                 required
+//                 className="pl-12 border border-packaging-DEFAULT rounded px-4 py-3 text-lg outline-none bg-white/80 focus:ring-2 focus:ring-packaging-accent transition w-full"
+//               />
+//             </div>
+//             <div className="relative flex items-center">
+//               <FaEnvelope className="absolute left-4 text-packaging-accent w-5 h-5" />
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder={t.email}
+//                 value={formData.email}
+//                 onChange={handleChange}
+//                 required
+//                 className="pl-12 border border-packaging-DEFAULT rounded px-4 py-3 text-lg outline-none bg-white/80 focus:ring-2 focus:ring-packaging-accent transition w-full"
+//               />
+//             </div>
+//             <div className="relative flex items-center">
+//               <FaBuilding className="absolute left-4 text-packaging-accent w-5 h-5" />
+//               <input
+//                 type="text"
+//                 name="company"
+//                 placeholder={t.company}
+//                 value={formData.company}
+//                 onChange={handleChange}
+//                 className="pl-12 border border-packaging-DEFAULT rounded px-4 py-3 text-lg outline-none bg-white/80 focus:ring-2 focus:ring-packaging-accent transition w-full"
+//               />
+//             </div>
+//             <div className="relative flex items-center">
+//               <FaPhoneAlt className="absolute left-4 text-packaging-accent w-5 h-5" />
+//               <input
+//                 type="text"
+//                 name="mobile"
+//                 placeholder={t.mobile}
+//                 value={formData.mobile}
+//                 onChange={handleChange}
+//                 required
+//                 className="pl-12 border border-packaging-DEFAULT rounded px-4 py-3 text-lg outline-none bg-white/80 focus:ring-2 focus:ring-packaging-accent transition w-full"
+//               />
+//             </div>
+//             <div className="relative flex items-center">
+//               <FaRegListAlt className="absolute left-4 top-4 text-packaging-accent w-5 h-5" />
+//               <textarea
+//                 name="details"
+//                 placeholder={t.details}
+//                 value={formData.details}
+//                 onChange={handleChange}
+//                 rows={5}
+//                 required
+//                 className="pl-12 border border-packaging-DEFAULT rounded px-4 py-3 text-lg outline-none bg-white/80 focus:ring-2 focus:ring-packaging-accent transition w-full resize-none"
+//               />
+//             </div>
+//             <button
+//               type="submit"
+//               disabled={loading}
+//               className="mt-2 bg-packaging-accent hover:bg-packaging-accentDark transition text-white font-bold text-lg py-4 px-6 rounded-full shadow disabled:opacity-50"
+//             >
+//               {loading ? t.button + '...' : t.button}
+//             </button>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
 'use client'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useLanguage } from '@/context/LanguageContext'
 import { FaUser, FaEnvelope, FaBuilding, FaPhoneAlt, FaRegListAlt } from 'react-icons/fa'
 
@@ -261,6 +436,7 @@ export default function QuotationPage() {
         alert(t.failure)
       }
     } catch (error) {
+      console.error('Quotation submission error:', error)
       alert(t.failure)
     } finally {
       setLoading(false)
@@ -298,7 +474,7 @@ export default function QuotationPage() {
             style={{ minWidth: '320px' }}
           >
             <div className="relative flex items-center">
-              <FaUser className="absolute left-4 text-packaging-accent w-5 h-5" />
+              <FaUser className="absolute left-4 text-packaging-accent w-5 h-5" aria-hidden="true" />
               <input
                 type="text"
                 name="name"
@@ -310,7 +486,7 @@ export default function QuotationPage() {
               />
             </div>
             <div className="relative flex items-center">
-              <FaEnvelope className="absolute left-4 text-packaging-accent w-5 h-5" />
+              <FaEnvelope className="absolute left-4 text-packaging-accent w-5 h-5" aria-hidden="true" />
               <input
                 type="email"
                 name="email"
@@ -322,7 +498,7 @@ export default function QuotationPage() {
               />
             </div>
             <div className="relative flex items-center">
-              <FaBuilding className="absolute left-4 text-packaging-accent w-5 h-5" />
+              <FaBuilding className="absolute left-4 text-packaging-accent w-5 h-5" aria-hidden="true" />
               <input
                 type="text"
                 name="company"
@@ -333,7 +509,7 @@ export default function QuotationPage() {
               />
             </div>
             <div className="relative flex items-center">
-              <FaPhoneAlt className="absolute left-4 text-packaging-accent w-5 h-5" />
+              <FaPhoneAlt className="absolute left-4 text-packaging-accent w-5 h-5" aria-hidden="true" />
               <input
                 type="text"
                 name="mobile"
@@ -345,7 +521,7 @@ export default function QuotationPage() {
               />
             </div>
             <div className="relative flex items-center">
-              <FaRegListAlt className="absolute left-4 top-4 text-packaging-accent w-5 h-5" />
+              <FaRegListAlt className="absolute left-4 top-4 text-packaging-accent w-5 h-5" aria-hidden="true" />
               <textarea
                 name="details"
                 placeholder={t.details}
@@ -359,6 +535,7 @@ export default function QuotationPage() {
             <button
               type="submit"
               disabled={loading}
+              aria-busy={loading}
               className="mt-2 bg-packaging-accent hover:bg-packaging-accentDark transition text-white font-bold text-lg py-4 px-6 rounded-full shadow disabled:opacity-50"
             >
               {loading ? t.button + '...' : t.button}
