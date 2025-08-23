@@ -33,7 +33,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Branding and description */}
         <div className="flex flex-col items-center">
-          <div className="text-xl font-bold tracking-wider mb-2">Caja y Empaques Arely</div>
+          <div className="text-xl font-bold tracking-wider mb-2">Solucion en Cajas ALO</div>
           <div className="text-center text-sm max-w-2xl mb-6">
             Sustainable packaging solutions for businesses across Mexico. Premium manufacturing, custom branding, fast turnaround.
           </div>
@@ -60,7 +60,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-center text-xs text-[#f0ead9] font-medium tracking-wide mt-2">
-          © {new Date().getFullYear()} Caja y Empaques Arely. All Rights Reserved.
+          © {new Date().getFullYear()} Solucion en Cajas ALO. All Rights Reserved.
         </div>
       </div>
     </footer>

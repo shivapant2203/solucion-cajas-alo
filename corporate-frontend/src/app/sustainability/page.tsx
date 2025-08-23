@@ -38,7 +38,7 @@ export default function SustainabilityPage() {
           Fabricación responsable, futuro verde.
         </h2>
         <p className="text-lg text-packaging-dark leading-relaxed mb-5">
-          En Caja y Empaques Arely, diseñamos soluciones de empaque pensando en el planeta y en las generaciones futuras. Nuestras fábricas utilizan energía eficiente, materiales renovables y una política activa de reducción y reciclaje de residuos.
+          En Solucion en Cajas ALO, diseñamos soluciones de empaque pensando en el planeta y en las generaciones futuras. Nuestras fábricas utilizan energía eficiente, materiales renovables y una política activa de reducción y reciclaje de residuos.
         </p>
         <p className="text-lg text-packaging-dark leading-relaxed">
           Al colaborar con proveedores certificados y aplicar procesos sustentables en cada paso, minimizamos nuestro impacto ambiental y ayudamos a otros negocios a alcanzar sus objetivos de sostenibilidad.

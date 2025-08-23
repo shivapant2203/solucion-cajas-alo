@@ -5,7 +5,7 @@
 // //     <nav className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
 // //       <div className="max-w-7xl mx-auto flex flex-row items-center justify-between px-6 py-3">
 // //         <Link href="/" className="text-2xl font-bold tracking-tight whitespace-nowrap">
-// //           Caja y Empaques Arely
+// //           Solucion en Cajas ALO
 // //         </Link>
 // //         <div className="flex flex-wrap items-center gap-2 sm:gap-4 md:gap-6">
 // //           <Link href="/" className="px-3 py-1 rounded hover:bg-blue-800 transition">Home</Link>
@@ -46,7 +46,7 @@
 //     <nav className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
 //       <div className="max-w-7xl mx-auto flex flex-row items-center justify-between px-6 py-3">
 //         <Link href="/" className="text-2xl font-bold tracking-tight whitespace-nowrap">
-//           Caja y Empaques Arely
+//           Solucion en Cajas ALO
 //         </Link>
         
 //         <div className="flex items-center gap-6">
@@ -92,7 +92,7 @@
 //     <nav className="bg-blue-900 text-white shadow-md sticky top-0 z-50">
 //       <div className="max-w-7xl mx-auto flex flex-row items-center justify-between px-6 py-3">
 //         <Link href="/" className="text-2xl font-bold tracking-tight whitespace-nowrap">
-//           Caja y Empaques Arely
+//           Solucion en Cajas ALO
 //         </Link>
 
 //         <div className="flex items-center gap-6">
@@ -138,7 +138,7 @@
 //       <div className="max-w-7xl mx-auto flex flex-row items-center justify-between px-6 py-3">
 //         {/* Logo */}
 //         <Link href="/" className="text-2xl font-bold tracking-tight whitespace-nowrap text-gray-900">
-//           Caja y Empaques Arely
+//           Solucion en Cajas ALO
 //         </Link>
 //         <div className="flex items-center gap-6">
 //           {/* Nav links */}
@@ -188,7 +188,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex flex-row items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold tracking-tight whitespace-nowrap text-textPrimary">
-          Caja y Empaques Arely
+          Solucion en Cajas ALO
         </Link>
         <div className="flex items-center gap-6">
           <Link href="/" className="hover:text-textAccent transition">{t.home}</Link>

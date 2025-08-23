@@ -47,7 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         <li><b>Details:</b> ${details.replace(/\n/g, '<br>')}</li>
       </ul>
       <p>If you have any questions, reply to this email or contact us directly.</p>
-      <p><b>Caja y Empaques Arely</b></p>
+      <p><b>Solucion en Cajas ALO</b></p>
     `,
   }
 

@@ -4,7 +4,7 @@
 
 // const pageTranslations = {
 //   en: {
-//     heading: "Contact Caja y Empaques Arely",
+//     heading: "Contact Solucion en Cajas ALO",
 //     subheading: "We serve clients all across Mexico from our two manufacturing factories in San Jose El Jaral.",
 //     addressLabel: "Address",
 //     address: "San Jose El Jaral, Atizapan De Zaragoza, 52924, Mexico",
@@ -21,7 +21,7 @@
 //     whatsapp_phone: "5215512345678"
 //   },
 //   es: {
-//     heading: "Contacto Caja y Empaques Arely",
+//     heading: "Contacto Solucion en Cajas ALO",
 //     subheading: "Atendemos clientes en todo México desde nuestras dos fábricas en San José El Jaral.",
 //     addressLabel: "Dirección",
 //     address: "San José El Jaral, Atizapán de Zaragoza, 52924, México",
@@ -160,7 +160,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
 
 const pageTranslations = {
   en: {
-    heading: "Contact Caja y Empaques Arely",
+    heading: "Contact Solucion en Cajas ALO",
     subheading: "We serve clients all across Mexico from our two manufacturing factories in San Jose El Jaral.",
     addressLabel: "Address",
     address: "San Jose El Jaral, Atizapan De Zaragoza, 52924, Mexico",
@@ -177,7 +177,7 @@ const pageTranslations = {
     whatsapp_phone: "5215512345678"
   },
   es: {
-    heading: "Contacto Caja y Empaques Arely",
+    heading: "Contacto Solucion en Cajas ALO",
     subheading: "Atendemos clientes en todo México desde nuestras dos fábricas en San José El Jaral.",
     addressLabel: "Dirección",
     address: "San José El Jaral, Atizapán de Zaragoza, 52924, México",

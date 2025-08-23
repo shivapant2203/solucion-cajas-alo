@@ -19,16 +19,16 @@ app.get("/", (req, res) => {
 //home page
 app.get('/api/home', (req, res) => {
   res.json({
-    title: "Welcome to Caja y Empaques Arely",
-    description: "En Cajas y Empaques Arely nos especializamos en la fabricación de cajas de cartón a la medida exacta que tu negocio necesita. Creamos soluciones personalizadas, con o sin impresión, en cartón sencillo o doble corrugado, adaptándonos por completo a tus requerimientos. Nuestro lema lo dice todo: Tus ideas, nuestras cajas.",
+    title: "Welcome to Solucion en Cajas ALO",
+    description: "En Solucion en Cajas ALO nos especializamos en la fabricación de cajas de cartón a la medida exacta que tu negocio necesita. Creamos soluciones personalizadas, con o sin impresión, en cartón sencillo o doble corrugado, adaptándonos por completo a tus requerimientos. Nuestro lema lo dice todo: Tus ideas, nuestras cajas.",
   });
 });
 
 // About page test API
 app.get("/api/about", (req, res) => {
   res.send({
-    title: "About Caja y Empaques Arely",
-    description: "En Cajas y Empaques Arely nos especializamos en la fabricación de cajas de cartón a la medida exacta que tu negocio necesita. Creamos soluciones personalizadas, con o sin impresión, en cartón sencillo o doble corrugado, adaptándonos por completo a tus requerimientos. Nuestro lema lo dice todo: Tus ideas, nuestras cajas.Contamos con una infraestructura moderna y maquinaria de alto rendimiento, como flexo, pegadora y suajadora, que nos permite producir desde tirajes pequeños hasta grandes volúmenes con la mejor calidad y puntualidad. Además, contamos con transporte propio para llevar tu pedido directamente a tus instalaciones, sin complicaciones.En Cajas y Empaques Arely, convertimos tus necesidades en soluciones prácticas y profesionales, para que tu producto llegue siempre bien presentado y protegido."
+    title: "About Solucion en Cajas ALO",
+    description: "En Solucion en Cajas ALO nos especializamos en la fabricación de cajas de cartón a la medida exacta que tu negocio necesita. Creamos soluciones personalizadas, con o sin impresión, en cartón sencillo o doble corrugado, adaptándonos por completo a tus requerimientos. Nuestro lema lo dice todo: Tus ideas, nuestras cajas.Contamos con una infraestructura moderna y maquinaria de alto rendimiento, como flexo, pegadora y suajadora, que nos permite producir desde tirajes pequeños hasta grandes volúmenes con la mejor calidad y puntualidad. Además, contamos con transporte propio para llevar tu pedido directamente a tus instalaciones, sin complicaciones.En Solucion en Cajas ALO, convertimos tus necesidades en soluciones prácticas y profesionales, para que tu producto llegue siempre bien presentado y protegido."
   });
 });
 
@@ -57,15 +57,15 @@ app.get('/api/products', (req, res) => {
 app.get('/api/sustainability', (req, res) => {
   res.json({
     title: "Our Commitment to Sustainability",
-    description: "At Caja y Empaques Arely, we believe in responsible manufacturing. Our two factories in San Jose El Jaral use energy-efficient equipment and recycle over 80% of production waste. We work with suppliers who share our commitment to sustainability and ensure that our packaging materials are recyclable and eco‑friendly. Our goal is to deliver high‑quality boxes while minimizing our environmental footprint for a greener Mexico."
+    description: "At Solucion en Cajas ALO, we believe in responsible manufacturing. Our two factories in San Jose El Jaral use energy-efficient equipment and recycle over 80% of production waste. We work with suppliers who share our commitment to sustainability and ensure that our packaging materials are recyclable and eco‑friendly. Our goal is to deliver high‑quality boxes while minimizing our environmental footprint for a greener Mexico."
   });
 });
 
 //careers page
 app.get('/api/careers', (req, res) => {
   res.json({
-    title: "Careers at Caja y Empaques Arely",
-    description: "Join our growing team at Caja y Empaques Arely, a leader in sustainable packaging solutions across Mexico. Based in San Jose El Jaral, Atizapan De Zaragoza, we operate two manufacturing plants and a printing facility and offer opportunities in production, quality control, sales, logistics, and administration. We value teamwork, innovation, and dedication to customer satisfaction.",
+    title: "Careers at Solucion en Cajas ALO",
+    description: "Join our growing team at Solucion en Cajas ALO, a leader in sustainable packaging solutions across Mexico. Based in San Jose El Jaral, Atizapan De Zaragoza, we operate two manufacturing plants and a printing facility and offer opportunities in production, quality control, sales, logistics, and administration. We value teamwork, innovation, and dedication to customer satisfaction.",
     openings: [
       {
         id: 1,
@@ -86,7 +86,7 @@ app.get('/api/careers', (req, res) => {
 //contact page
 app.get('/api/contact', (req, res) => {
   res.json({
-    title: "Contact Caja y Empaques Arely",
+    title: "Contact Solucion en Cajas ALO",
     address: "San Jose El Jaral, Atizapan De Zaragoza, 52924, Mexico",
     phone: "+52-55-1234-5678",
     email: "contacto@cajaempaquesarely.com",
@@ -285,7 +285,7 @@ transporter.verify((error, success) => {
         <li><b>Details:</b> ${details.replace(/\n/g, '<br>')}</li>
       </ul>
       <p>If you have any questions, reply to this email or contact us directly.</p>
-      <p><b>Caja y Empaques Arely</b></p>
+      <p><b>Solucion en Cajas ALO</b></p>
     `
   };
 

@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const careersData = {
-  title: 'Careers at Caja y Empaques Arely',
+  title: 'Careers at Solucion en Cajas ALO',
   description:
-    'Join our growing team at Caja y Empaques Arely, a leader in sustainable packaging solutions across Mexico. Based in San Jose El Jaral, Atizapan De Zaragoza, we operate two manufacturing plants and a printing facility and offer opportunities in production, quality control, sales, logistics, and administration. We value teamwork, innovation, and dedication to customer satisfaction.',
+    'Join our growing team at Solucion en Cajas ALO, a leader in sustainable packaging solutions across Mexico. Based in San Jose El Jaral, Atizapan De Zaragoza, we operate two manufacturing plants and a printing facility and offer opportunities in production, quality control, sales, logistics, and administration. We value teamwork, innovation, and dedication to customer satisfaction.',
   openings: [
     {
       id: 1,

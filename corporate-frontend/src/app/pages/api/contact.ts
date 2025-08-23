@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const contactData = {
-  title: 'Contact Caja y Empaques Arely',
+  title: 'Contact Solucion en Cajas ALO',
   address: 'San Jose El Jaral, Atizapan De Zaragoza, 52924, Mexico',
   phone: '+52-55-1234-5678',
   email: 'contacto@cajaempaquesarely.com',

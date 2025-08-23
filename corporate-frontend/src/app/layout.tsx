@@ -6,7 +6,7 @@
 // import { LanguageProvider } from '@/context/LanguageContext'
 
 // export const metadata = {
-//   title: 'Caja y Empaques Arely',
+//   title: 'Solucion en Cajas ALO',
 //   description: 'Premium packaging and branding specialist in Mexico.',
 // }
 
@@ -41,7 +41,7 @@ import ContactButton from '@/components/ContactButton'
 import { LanguageProvider } from '@/context/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'Caja y Empaques Arely',
+  title: 'Solucion en Cajas ALO',
   description: 'Premium packaging and branding specialist in Mexico.',
 }
 

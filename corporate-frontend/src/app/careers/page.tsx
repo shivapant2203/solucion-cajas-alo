@@ -5,7 +5,7 @@
 
 // const pageTranslations = {
 //   en: {
-//     heading: "Careers at Caja y Empaques Arely",
+//     heading: "Careers at Solucion en Cajas ALO",
 //     subheading: "Grow your future with Mexico’s leader in sustainable packaging.",
 //     intro: `Join our diverse team and help us create packaging solutions with purpose. We offer careers in production, quality control, sales, logistics and more, with professional growth and a commitment to values like teamwork, innovation, and sustainability.`,
 //     positions: [
@@ -25,7 +25,7 @@
 //     cta: "Apply now"
 //   },
 //   es: {
-//     heading: "Empleos en Caja y Empaques Arely",
+//     heading: "Empleos en Solucion en Cajas ALO",
 //     subheading: "Impulsa tu futuro en el líder mexicano de empaques sustentables.",
 //     intro: `Únete a nuestro equipo y ayuda a crear soluciones de empaque con propósito. Ofrecemos carreras en producción, control de calidad, ventas, logística y más, con crecimiento profesional y compromiso con valores como trabajo en equipo, innovación y sostenibilidad.`,
 //     positions: [
@@ -125,7 +125,7 @@ import { FaUserTie, FaIndustry } from 'react-icons/fa'
 
 const pageTranslations = {
   en: {
-    heading: "Careers at Caja y Empaques Arely",
+    heading: "Careers at Solucion en Cajas ALO",
     subheading: "Grow your future with Mexico’s leader in sustainable packaging.",
     intro: `Join our diverse team and help us create packaging solutions with purpose. We offer careers in production, quality control, sales, logistics and more, with professional growth and a commitment to values like teamwork, innovation, and sustainability.`,
     positions: [
@@ -145,7 +145,7 @@ const pageTranslations = {
     cta: "Apply now"
   },
   es: {
-    heading: "Empleos en Caja y Empaques Arely",
+    heading: "Empleos en Solucion en Cajas ALO",
     subheading: "Impulsa tu futuro en el líder mexicano de empaques sustentables.",
     intro: `Únete a nuestro equipo y ayuda a crear soluciones de empaque con propósito. Ofrecemos carreras en producción, control de calidad, ventas, logística y más, con crecimiento profesional y compromiso con valores como trabajo en equipo, innovación y sostenibilidad.`,
     positions: [
