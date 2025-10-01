@@ -363,19 +363,17 @@ export default function Navbar() {
 
   return (
     <nav className="bg-packaging-light text-textPrimary shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-        {/* Logo in visible white box with border/shadow for contrast */}
-        <Link href="/" className="flex items-center min-w-[84px]">
-          <span className="inline-block bg-white rounded-xl border border-gray-200 shadow-sm p-2">
-            <Image
-              src="/cajasalologo.png"
-              alt="Caja y Empaques ALO logo"
-              width={60}
-              height={60}
-              priority
-              className="object-contain"
-            />
-          </span>
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
+        {/* Transparent background logo */}
+        <Link href="/" className="flex items-center min-w-[64px]">
+          <Image
+            src="/cajasalologoupd.png"  // Updated logo filename with transparency
+            alt="Caja y Empaques ALO logo"
+            width={64}
+            height={64}
+            priority
+            className="object-contain"
+          />
         </Link>
 
         {/* Desktop menu */}
@@ -395,7 +393,7 @@ export default function Navbar() {
           <LanguageSelector />
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile hamburger */}
         <button
           className="inline-flex items-center justify-center p-2 rounded md:hidden hover:bg-packaging-accent transition"
           aria-label="Toggle menu"
