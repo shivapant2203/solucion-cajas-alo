@@ -277,7 +277,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center min-w-[140px]">
           <Image
-            src="/logo.png"
+            src="/cajasalologo.png"
             alt="Caja y Empaques ALO logo"
             width={48}      // Set logo height; width will auto-scale
             height={48}
