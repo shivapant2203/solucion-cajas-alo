@@ -454,81 +454,78 @@ export default function Navbar() {
 
   return (
     <nav className="bg-packaging-light text-textPrimary shadow-md sticky top-0 z-50">
-      <div className="flex items-center h-20 px-6 max-w-full">
-        {/* Logo Area (fixed width, left-aligned, not inside max-w-7xl) */}
-        <div className="flex items-center justify-center w-[120px] h-full">
-          <Link href="/">
-            <Image
-              src="/cajasalologoupd.png"
-              alt="Caja y Empaques ALO logo"
-              width={120}
-              height={120}
-              priority
-              className="object-contain"
-            />
-          </Link>
-        </div>
-        {/* Navbar Menu (max-width and centered) */}
-        <div className="flex-grow flex justify-center">
-          <div className="max-w-7xl flex items-center justify-between w-full h-full">
-            {/* Desktop menu */}
-            <div className="hidden md:flex items-center gap-6 h-full">
-              <Link href="/" className="hover:text-textAccent transition">{t.home}</Link>
-              <Link href="/about" className="hover:text-textAccent transition">{t.about}</Link>
-              <Link href="/products" className="hover:text-textAccent transition">{t.products}</Link>
-              <Link href="/sustainability" className="hover:text-textAccent transition">{t.sustainability}</Link>
-              <Link href="/careers" className="hover:text-textAccent transition">{t.careers}</Link>
-              <Link href="/contact" className="hover:text-textAccent transition">{t.contact}</Link>
-              <Link
-                href="/quotation"
-                className="bg-packaging-accent text-white font-semibold rounded px-3 py-1 shadow hover:bg-packaging-accentDark transition"
-              >
-                {t.quotation}
-              </Link>
-              <LanguageSelector />
-            </div>
-            {/* Mobile hamburger and menu */}
-            <button
-              className="inline-flex items-center justify-center p-2 rounded md:hidden hover:bg-packaging-accent transition"
-              aria-label="Toggle menu"
-              onClick={() => setIsOpen(!isOpen)}
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
+        {/* Logo Section: left, prominent size, vertically centered */}
+        <Link href="/" className="flex items-center" style={{ minWidth: 84 }}>
+          <Image
+            src="/cajasalologoupd.png"   // Transparent logo file in /public
+            alt="Caja y Empaques ALO logo"
+            width={130}                // Prominent size, adjust as needed
+            height={130}
+            priority
+            className="object-contain"
+          />
+        </Link>
+        {/* Main menu links */}
+        <div className="flex-1 flex items-center justify-end">
+          {/* Desktop navigation links */}
+          <div className="hidden md:flex items-center gap-6">
+            <Link href="/" className="hover:text-textAccent transition">{t.home}</Link>
+            <Link href="/about" className="hover:text-textAccent transition">{t.about}</Link>
+            <Link href="/products" className="hover:text-textAccent transition">{t.products}</Link>
+            <Link href="/sustainability" className="hover:text-textAccent transition">{t.sustainability}</Link>
+            <Link href="/careers" className="hover:text-textAccent transition">{t.careers}</Link>
+            <Link href="/contact" className="hover:text-textAccent transition">{t.contact}</Link>
+            <Link
+              href="/quotation"
+              className="bg-packaging-accent text-white font-semibold rounded px-3 py-1 shadow hover:bg-packaging-accentDark transition"
             >
-              <svg
-                className="w-6 h-6 text-packaging-dark"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-            {isOpen && (
-              <div className="absolute top-full left-0 w-full bg-packaging-light shadow-md md:hidden z-50">
-                <div className="flex flex-col items-center gap-6 py-4">
-                  <Link href="/" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.home}</Link>
-                  <Link href="/about" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.about}</Link>
-                  <Link href="/products" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.products}</Link>
-                  <Link href="/sustainability" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.sustainability}</Link>
-                  <Link href="/careers" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.careers}</Link>
-                  <Link href="/contact" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.contact}</Link>
-                  <Link
-                    href="/quotation"
-                    className="bg-packaging-accent text-white font-semibold rounded px-3 py-1 shadow hover:bg-packaging-accentDark transition"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t.quotation}
-                  </Link>
-                  <LanguageSelector />
-                </div>
-              </div>
-            )}
+              {t.quotation}
+            </Link>
+            <LanguageSelector />
           </div>
+          {/* Mobile hamburger button */}
+          <button
+            className="inline-flex items-center justify-center p-2 rounded md:hidden hover:bg-packaging-accent transition ml-2"
+            aria-label="Toggle menu"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <svg
+              className="w-6 h-6 text-packaging-dark"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
       </div>
+      {/* Mobile menu: overlays under navbar */}
+      {isOpen && (
+        <div className="absolute top-full left-0 w-full bg-packaging-light shadow-md md:hidden z-50">
+          <div className="flex flex-col items-center gap-6 py-4">
+            <Link href="/" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.home}</Link>
+            <Link href="/about" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.about}</Link>
+            <Link href="/products" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.products}</Link>
+            <Link href="/sustainability" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.sustainability}</Link>
+            <Link href="/careers" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.careers}</Link>
+            <Link href="/contact" className="hover:text-textAccent transition" onClick={() => setIsOpen(false)}>{t.contact}</Link>
+            <Link
+              href="/quotation"
+              className="bg-packaging-accent text-white font-semibold rounded px-3 py-1 shadow hover:bg-packaging-accentDark transition"
+              onClick={() => setIsOpen(false)}
+            >
+              {t.quotation}
+            </Link>
+            <LanguageSelector />
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
