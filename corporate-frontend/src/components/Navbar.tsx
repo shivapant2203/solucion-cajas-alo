@@ -269,26 +269,41 @@ import LanguageSelector from '@/components/LanguageSelector'
 export default function Navbar() {
   const { language } = useLanguage()
   const t = translations[language]
-
-  // State to track mobile menu open/close
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav className="bg-packaging-light text-textPrimary shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-3">
-        
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center min-w-[140px]">
           <Image
-            src="/cajasalologo.png"
-            alt="Solucion en Cajas ALO logo"
-            width={140}
+            src="/logo.png"
+            alt="Caja y Empaques ALO logo"
+            width={48}      // Set logo height; width will auto-scale
             height={48}
             priority
+            className="object-contain"
           />
         </Link>
 
-        {/* Hamburger menu button - visible on small screens */}
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-6">
+          <Link href="/" className="hover:text-textAccent transition">{t.home}</Link>
+          <Link href="/about" className="hover:text-textAccent transition">{t.about}</Link>
+          <Link href="/products" className="hover:text-textAccent transition">{t.products}</Link>
+          <Link href="/sustainability" className="hover:text-textAccent transition">{t.sustainability}</Link>
+          <Link href="/careers" className="hover:text-textAccent transition">{t.careers}</Link>
+          <Link href="/contact" className="hover:text-textAccent transition">{t.contact}</Link>
+          <Link
+            href="/quotation"
+            className="bg-packaging-accent text-white font-semibold rounded px-3 py-1 shadow hover:bg-packaging-accentDark transition"
+          >
+            {t.quotation}
+          </Link>
+          <LanguageSelector />
+        </div>
+
+        {/* Mobile Hamburger */}
         <button
           className="inline-flex items-center justify-center p-2 rounded md:hidden hover:bg-packaging-accent transition"
           aria-label="Toggle menu"
@@ -299,64 +314,36 @@ export default function Navbar() {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             {isOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
 
-        {/* Menu links - visible on md+ or if menu open on small */}
-        <div
-          className={`w-full md:flex md:items-center md:w-auto ${
-            isOpen ? 'block' : 'hidden'
-          }`}
-        >
-          <div className="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-center md:text-left">
-            <Link href="/" className="hover:text-textAccent transition py-2 md:py-0">
-              {t.home}
-            </Link>
-            <Link href="/about" className="hover:text-textAccent transition py-2 md:py-0">
-              {t.about}
-            </Link>
-            <Link href="/products" className="hover:text-textAccent transition py-2 md:py-0">
-              {t.products}
-            </Link>
-            <Link href="/sustainability" className="hover:text-textAccent transition py-2 md:py-0">
-              {t.sustainability}
-            </Link>
-            <Link href="/careers" className="hover:text-textAccent transition py-2 md:py-0">
-              {t.careers}
-            </Link>
-            <Link href="/contact" className="hover:text-textAccent transition py-2 md:py-0">
-              {t.contact}
-            </Link>
-            <Link
-              href="/quotation"
-              className="bg-packaging-accent text-white font-semibold rounded px-3 py-1 shadow hover:bg-packaging-accentDark transition md:ml-3 md:py-2"
-            >
-              {t.quotation}
-            </Link>
-            <div className="py-2 md:py-0">
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="absolute top-full left-0 w-full bg-packaging-light shadow-md md:hidden">
+            <div className="flex flex-col items-center gap-6 py-3">
+              <Link href="/" className="hover:text-textAccent transition">{t.home}</Link>
+              <Link href="/about" className="hover:text-textAccent transition">{t.about}</Link>
+              <Link href="/products" className="hover:text-textAccent transition">{t.products}</Link>
+              <Link href="/sustainability" className="hover:text-textAccent transition">{t.sustainability}</Link>
+              <Link href="/careers" className="hover:text-textAccent transition">{t.careers}</Link>
+              <Link href="/contact" className="hover:text-textAccent transition">{t.contact}</Link>
+              <Link
+                href="/quotation"
+                className="bg-packaging-accent text-white font-semibold rounded px-3 py-1 shadow hover:bg-packaging-accentDark transition"
+              >
+                {t.quotation}
+              </Link>
               <LanguageSelector />
             </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   )
 }
-
