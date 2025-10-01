@@ -369,8 +369,8 @@ export default function Navbar() {
           <Image
             src="/cajasalologoupd.png"  // Updated logo filename with transparency
             alt="Caja y Empaques ALO logo"
-            width={80}
-            height={80}
+            width={90}
+            height={90}
             priority
             className="object-contain"
           />
