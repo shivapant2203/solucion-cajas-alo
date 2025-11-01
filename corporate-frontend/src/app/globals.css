@@ -18,7 +18,13 @@
   font-family: 'Inter', sans-serif;
 }
 
-
 .fade-slide-up {
   animation: fadeSlideUp 0.6s ease-out forwards;
+}
+
+/* --- Add this to move the AI Chatbase widget to the left side --- */
+#chatbase-bubble {
+  left: 24px !important;
+  right: auto !important;
+  bottom: 24px !important;
 }
